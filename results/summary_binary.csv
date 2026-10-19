@@ -1,0 +1,5 @@
+,,,,,n_seeds,params,test_macro_auroc,test_macro_auroc,test_macro_auprc,test_macro_auprc,auroc_abnormal,auroc_abnormal
+,,,,,,,mean,std,mean,std,mean,std
+task,model,leads,fs,win_sec,,,,,,,,
+binary,resnet1d_wang_s5,V2-V1,500,2.5,3,535553,0.8515,0.0014,0.9035,0.0009,0.8515,0.0014
+binary,resnet1d_wang_s5,V3,500,2.5,3,535553,0.865,0.0015,0.9117,0.0007,0.865,0.0015

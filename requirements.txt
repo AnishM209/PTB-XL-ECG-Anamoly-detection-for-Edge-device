@@ -1,0 +1,10 @@
+# Training and evaluation on the cluster (Python 3.11).
+# PyTorch must match the GPU driver; on Prajna (CUDA 12.8) install the cu128 build:
+#   pip install torch --index-url https://download.pytorch.org/whl/cu128
+torch
+numpy
+pandas
+scipy
+scikit-learn
+wfdb
+matplotlib

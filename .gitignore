@@ -1,0 +1,21 @@
+# Large data and generated artefacts, kept on the cluster only
+data/
+stage1_out/
+runs/
+logs/
+eval/
+samples/
+export/
+*.pt
+*.npy
+*.dat
+*.hea
+*.log
+
+# Python and editor clutter
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.vscode/
+.idea/
+.DS_Store

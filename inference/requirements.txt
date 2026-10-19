@@ -1,0 +1,8 @@
+# Laptop inference (CPU). Install the small CPU build of PyTorch first:
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+torch
+numpy
+pandas
+scipy
+wfdb
+matplotlib
