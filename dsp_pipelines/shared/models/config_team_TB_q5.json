@@ -1,0 +1,46 @@
+{
+  "binary": {
+    "weights": "binary_V2-V1_seed0.pt",
+    "model": "resnet1d_wang_s5",
+    "leads": "V2-V1",
+    "fs": 500,
+    "win_sec": 2.5,
+    "mu": [
+      -0.0011510379845276475
+    ],
+    "sd": [
+      0.2551408112049103
+    ],
+    "threshold_balanced": 0.7943808436393738,
+    "threshold_high_sens": 0.5018903017044067,
+    "negative": "Normal",
+    "positive": "Abnormal",
+    "trained_run": "binary_resnet1d_wang_s5_V2-V1_500hz_2.5s_seed0",
+    "demean_windows": false,
+    "device_fs": 250,
+    "input_filter": "ADS1299 250 SPS -> TB (notch Q5) -> x2 -> team pipeline",
+    "thresholds_chosen_on": "PTB-XL fold 9 decimated to 250 Hz, variant chain"
+  },
+  "af": {
+    "weights": "af_V2-V1_seed0.pt",
+    "model": "resnet1d_wang_s5",
+    "leads": "V2-V1",
+    "fs": 500,
+    "win_sec": 5.0,
+    "mu": [
+      -0.0011699269525706768
+    ],
+    "sd": [
+      0.25498735904693604
+    ],
+    "threshold_balanced": 0.28880417346954346,
+    "threshold_high_sens": 0.41127514839172363,
+    "negative": "No AF",
+    "positive": "AF",
+    "trained_run": "af_resnet1d_wang_s5_V2-V1_500hz_5.0s_seed0",
+    "demean_windows": false,
+    "device_fs": 250,
+    "input_filter": "ADS1299 250 SPS -> TB (notch Q5) -> x2 -> team pipeline",
+    "thresholds_chosen_on": "PTB-XL fold 9 decimated to 250 Hz, variant chain"
+  }
+}

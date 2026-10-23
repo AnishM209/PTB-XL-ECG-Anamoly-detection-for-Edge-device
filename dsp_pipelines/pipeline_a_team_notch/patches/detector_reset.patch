@@ -1,0 +1,49 @@
+--- a/streaming_pipeline.py	2026-10-20 09:52:06.000000000 +0000
++++ b/streaming_pipeline.py	2026-10-20 12:08:48.370564095 +0000
+@@ -252,6 +252,22 @@
+         self.pending_M = 0.0
+         self.crossings = []
+         self.pending = None
++        # [FIX] detector reset: if no beat is found for 2 s after the warm-up, restart the detector from the
++        #       current noise/beat level (one large start-up artefact otherwise freezes M and F for good)
++        self.recover = int(2.0 * fs)
++        self.reset_at = 5 * fs          # time of warm-up end or of the last reset
++        self.f_start = 0                # F integrates only over windows that start after this sample
++        self.sec_max, self._cur_max = [], 0.0
++
++    def _reset(self, i):
++        lvl = float(np.median(self.sec_max[-3:])) if self.sec_max else self.M
++        self.M = 0.6 * lvl
++        self.Mbuf = [self.M] * 5
++        self.pending_M = 0.0
++        self.F, self.R = 0.0, 0.0
++        self.f_start = i
++        self.crossings, self.RRbuf, self.exp_rr = [], [], 0
++        self.reset_at = i
+ 
+     def _pushM(self, v):
+         self.Mbuf.append(v)
+@@ -260,6 +276,14 @@
+ 
+     def step(self, i, X):
+         x = X.get(i)
++        # per-second maxima of |D4| (used only by a reset)
++        self._cur_max = max(self._cur_max, x)
++        if (i + 1) % self.fs == 0:
++            self.sec_max = (self.sec_max + [self._cur_max])[-5:]; self._cur_max = 0.0
++        if i >= 5 * self.fs:
++            ref = max(self.crossings[-1] if self.crossings else 0, self.reset_at)
++            if i - ref >= self.recover:
++                self._reset(i)
+         last = self.crossings[-1] if self.crossings else None
+         ssl = (i - last) if last is not None else None
+         warm = i < 5 * self.fs
+@@ -284,7 +308,7 @@
+         elif last is not None and ssl >= self.w1200:
+             self.M = 0.6 * np.mean(self.Mbuf)
+         # ---- F
+-        if i > self.w350:
++        if i > self.f_start + self.w350:
+             self.F += (max(X.get(k) for k in range(i - self.w50, i)) -
+                        max(X.get(k) for k in range(i - self.w350, i - self.w350 + self.w50))) / self.F_div
+         # ---- R

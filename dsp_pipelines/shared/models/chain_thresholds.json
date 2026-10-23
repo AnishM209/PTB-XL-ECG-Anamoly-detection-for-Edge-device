@@ -1,0 +1,76 @@
+{
+  "binary": {
+    "raw": {
+      "threshold_balanced": 0.5944820046424866,
+      "threshold_high_sens": 0.30427974462509155,
+      "chain": "raw"
+    },
+    "A": {
+      "threshold_balanced": 0.6625134348869324,
+      "threshold_high_sens": 0.43115201592445374,
+      "chain": "raw -> team"
+    },
+    "B": {
+      "threshold_balanced": 0.6935729384422302,
+      "threshold_high_sens": 0.4644330143928528,
+      "chain": "notch -> team"
+    },
+    "C": {
+      "threshold_balanced": 0.709335446357727,
+      "threshold_high_sens": 0.41993996500968933,
+      "chain": "notch+LP40 -> team"
+    },
+    "D1": {
+      "threshold_balanced": 0.6062695384025574,
+      "threshold_high_sens": 0.29868564009666443,
+      "chain": "notch+LP40"
+    },
+    "D2": {
+      "threshold_balanced": 0.5704965591430664,
+      "threshold_high_sens": 0.27924662828445435,
+      "chain": "notch+LP40+HP0.05"
+    },
+    "D3": {
+      "threshold_balanced": 0.582331657409668,
+      "threshold_high_sens": 0.30007675290107727,
+      "chain": "notch+LP40, window mean removed"
+    }
+  },
+  "af": {
+    "raw": {
+      "threshold_balanced": 0.28251031041145325,
+      "threshold_high_sens": 0.34895798563957214,
+      "chain": "raw"
+    },
+    "A": {
+      "threshold_balanced": 0.28688517212867737,
+      "threshold_high_sens": 0.42340466380119324,
+      "chain": "raw -> team"
+    },
+    "B": {
+      "threshold_balanced": 0.24212664365768433,
+      "threshold_high_sens": 0.398006409406662,
+      "chain": "notch -> team"
+    },
+    "C": {
+      "threshold_balanced": 0.3498506247997284,
+      "threshold_high_sens": 0.4887201488018036,
+      "chain": "notch+LP40 -> team"
+    },
+    "D1": {
+      "threshold_balanced": 0.3608871400356293,
+      "threshold_high_sens": 0.4685431718826294,
+      "chain": "notch+LP40"
+    },
+    "D2": {
+      "threshold_balanced": 0.31688210368156433,
+      "threshold_high_sens": 0.47834572196006775,
+      "chain": "notch+LP40+HP0.05"
+    },
+    "D3": {
+      "threshold_balanced": 0.3616168200969696,
+      "threshold_high_sens": 0.49593910574913025,
+      "chain": "notch+LP40, window mean removed"
+    }
+  }
+}

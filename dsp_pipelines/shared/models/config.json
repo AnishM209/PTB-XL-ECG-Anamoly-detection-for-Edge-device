@@ -1,0 +1,38 @@
+{
+  "binary": {
+    "weights": "binary_V2-V1_seed0.pt",
+    "model": "resnet1d_wang_s5",
+    "leads": "V2-V1",
+    "fs": 500,
+    "win_sec": 2.5,
+    "mu": [
+      -0.0011510379845276475
+    ],
+    "sd": [
+      0.2551408112049103
+    ],
+    "threshold_balanced": 0.594483494758606,
+    "threshold_high_sens": 0.3042803704738617,
+    "negative": "Normal",
+    "positive": "Abnormal",
+    "trained_run": "binary_resnet1d_wang_s5_V2-V1_500hz_2.5s_seed0"
+  },
+  "af": {
+    "weights": "af_V2-V1_seed0.pt",
+    "model": "resnet1d_wang_s5",
+    "leads": "V2-V1",
+    "fs": 500,
+    "win_sec": 5.0,
+    "mu": [
+      -0.0011699269525706768
+    ],
+    "sd": [
+      0.25498735904693604
+    ],
+    "threshold_balanced": 0.2825156152248382,
+    "threshold_high_sens": 0.3489616811275482,
+    "negative": "No AF",
+    "positive": "AF",
+    "trained_run": "af_resnet1d_wang_s5_V2-V1_500hz_5.0s_seed0"
+  }
+}
