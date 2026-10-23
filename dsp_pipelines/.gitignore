@@ -7,3 +7,4 @@ batch/
 logs/
 __pycache__/
 *.pyc
+!shared/models/*.pt
