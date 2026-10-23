@@ -1,0 +1,19 @@
+Team pipeline in the device setting (250 Hz, notch Q5); thresholds on clean fold 9
+
+================ binary ================
+reference clean raw 500 Hz fold 10: AUROC 0.8519
+variant thr bal  AUROC  dAUROC vs raw [95% CI]        sens  spec   FP     n
+D        0.5750 0.8440  -0.0076 [-0.0126, -0.0025]*   0.718 0.831  154  2158
+   SELF-CHECK D threshold = config_device_q5.json: PASS
+TA       0.6623 0.8493  -0.0026 [-0.0070, +0.0020]    0.726 0.827  158  2158
+TB       0.7944 0.8360  -0.0157 [-0.0238, -0.0079]*   0.662 0.857  130  2158
+TC       0.6857 0.8419  -0.0098 [-0.0164, -0.0033]*   0.709 0.834  151  2158
+
+================ af ================
+reference clean raw 500 Hz fold 10: AUROC 0.9639
+variant thr bal  AUROC  dAUROC vs raw [95% CI]        sens  spec   FP     n
+D        0.3286 0.9634  -0.0006 [-0.0025, +0.0013]    0.879 0.969   61  2098
+   SELF-CHECK D threshold = config_device_q5.json: PASS
+TA       0.2719 0.9629  -0.0011 [-0.0054, +0.0038]    0.892 0.973   52  2098
+TB       0.2888 0.9640  +0.0000 [-0.0041, +0.0048]    0.885 0.971   57  2098
+TC       0.3084 0.9644  +0.0005 [-0.0036, +0.0054]    0.892 0.961   76  2098

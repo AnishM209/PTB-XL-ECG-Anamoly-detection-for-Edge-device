@@ -1,0 +1,42 @@
+{
+  "binary": {
+    "weights": "binary_V2-V1_seed0.pt",
+    "model": "resnet1d_wang_s5",
+    "leads": "V2-V1",
+    "fs": 500,
+    "win_sec": 2.5,
+    "mu": [
+      -0.0011510379845276475
+    ],
+    "sd": [
+      0.2551408112049103
+    ],
+    "threshold_balanced": 0.6063,
+    "threshold_high_sens": 0.2987,
+    "negative": "Normal",
+    "positive": "Abnormal",
+    "trained_run": "binary_resnet1d_wang_s5_V2-V1_500hz_2.5s_seed0",
+    "thresholds_chosen_on": "PTB-XL fold 9, causal 50 Hz notch (Q30) + 2nd-order Butterworth 40 Hz low-pass, steady state",
+    "input_filter": "notch50_q30 + lp40_order2, causal lfilter, no high-pass"
+  },
+  "af": {
+    "weights": "af_V2-V1_seed0.pt",
+    "model": "resnet1d_wang_s5",
+    "leads": "V2-V1",
+    "fs": 500,
+    "win_sec": 5.0,
+    "mu": [
+      -0.0011699269525706768
+    ],
+    "sd": [
+      0.25498735904693604
+    ],
+    "threshold_balanced": 0.3609,
+    "threshold_high_sens": 0.4685,
+    "negative": "No AF",
+    "positive": "AF",
+    "trained_run": "af_resnet1d_wang_s5_V2-V1_500hz_5.0s_seed0",
+    "thresholds_chosen_on": "PTB-XL fold 9, causal 50 Hz notch (Q30) + 2nd-order Butterworth 40 Hz low-pass, steady state",
+    "input_filter": "notch50_q30 + lp40_order2, causal lfilter, no high-pass"
+  }
+}

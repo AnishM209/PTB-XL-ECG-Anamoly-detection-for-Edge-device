@@ -1,0 +1,22 @@
+
+===== binary: n 2158, positives 1246, balanced threshold 0.594 =====
+signal         n   AUROC   AUPRC   sens   spec    PPV    TP    FN    FP    TN
+raw         2158  0.8519  0.9030  0.697  0.862  0.873   868   378   126   786
+teammate    2158  0.8179  0.8782  0.973  0.112  0.599  1212    34   810   102
+hp05_noA7   2158  0.8502  0.9000  0.743  0.799  0.835   926   320   183   729
+team06      2158  0.8495  0.8987  0.778  0.755  0.813   970   276   223   689
+SELF-CHECK raw vs Stage 1: PASS
+teammate   vs raw: dAUROC -0.0341 [95% CI -0.0443, -0.0239] | negatives: new false alarms 684, cleared 0 | positives: lost 1, gained 345 | failed records 0
+hp05_noA7  vs raw: dAUROC -0.0016 [95% CI -0.0045, +0.0014] | negatives: new false alarms 58, cleared 1 | positives: lost 2, gained 60 | failed records 0
+team06     vs raw: dAUROC -0.0025 [95% CI -0.0069, +0.0020] | negatives: new false alarms 101, cleared 4 | positives: lost 2, gained 104 | failed records 0
+
+===== af: n 2098, positives 157, balanced threshold 0.283 =====
+signal         n   AUROC   AUPRC   sens   spec    PPV    TP    FN    FP    TN
+raw         2098  0.9639  0.8294  0.866  0.977  0.751   136    21    45  1896
+teammate    2098  0.9522  0.7356  0.911  0.902  0.429   143    14   190  1751
+hp05_noA7   2098  0.9656  0.8241  0.854  0.976  0.744   134    23    46  1895
+team06      2098  0.9633  0.8220  0.873  0.973  0.725   137    20    52  1889
+SELF-CHECK raw vs Stage 1: PASS
+teammate   vs raw: dAUROC -0.0118 [95% CI -0.0209, -0.0029] | negatives: new false alarms 152, cleared 7 | positives: lost 2, gained 9 | failed records 0
+hp05_noA7  vs raw: dAUROC +0.0017 [95% CI -0.0013, +0.0051] | negatives: new false alarms 10, cleared 9 | positives: lost 2, gained 0 | failed records 0
+team06     vs raw: dAUROC -0.0008 [95% CI -0.0051, +0.0044] | negatives: new false alarms 16, cleared 9 | positives: lost 1, gained 2 | failed records 0

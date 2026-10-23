@@ -1,0 +1,10 @@
+# data and large outputs are never committed
+*.npz
+*.npy
+*.dat
+*.hea
+batch/
+logs/
+__pycache__/
+*.pyc
+!shared/models/*.pt
